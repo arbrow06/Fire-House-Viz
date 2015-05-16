@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Using HTML5 Geolocation to show current location with Google Maps API by @toddmotto | toddmotto.com</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="@toddmotto">
+    <link href="css/main.css" rel="stylesheet">
+    <style type="text/css">
+
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+
+*,
+*:after,
+*:before {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body {
+  font:400 13px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background:#333;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+.wrapper {
+  max-width:1280px;
+  margin:0 auto;
+}
+.header {
+  padding:15px 25px;
+  background:#FFF;
+  border-left:5px solid #2BA6CB;
+  overflow:hidden;
+}
+.logo {
+  float:left;
+}
+.nav {
+  float:right;
+  margin:12px 0;
+  list-style:none;
+}
+.nav-link {
+
+}
+.nav-link a {
+  color:#2BA6CB;
+  text-decoration:none;
+}
+/*------------------------------------*\
+    HTML5 Geolocation/Google Maps API
+\*------------------------------------*/
+
+html,
+body,
+#google_canvas {
+  height:100%;
+}
+#google_canvas h1 {
+  font-size:16px;
+}
+#google_canvas h2 {
+  font-size:14px;
+  font-weight:300;
+}
+</style>
+    <link href="css/demo.css" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <div id="google_canvas"></div>
+
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+      <script>
+      (function() {
+
+        if(!!navigator.geolocation) {
+
+          var map;
+
+          var mapOptions = {
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+
+          map = new google.maps.Map(document.getElementById('google_canvas'), mapOptions);
+
+          navigator.geolocation.getCurrentPosition(function(position) {
+
+            var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+            var infowindow = new google.maps.InfoWindow({
+              map: map,
+              position: geolocate,
+              content:
+                '<h1>Location pinned from HTML5 Geolocation!</h1>' +
+                '<h2>Latitude: ' + position.coords.latitude + '</h2>' +
+                '<h2>Longitude: ' + position.coords.longitude + '</h2>'
+            });
+
+            map.setCenter(geolocate);
+
+          });
+
+        } else {
+          document.getElementById('google_canvas').innerHTML = 'No Geolocation Support.';
+        }
+
+      })();
+      </script>
+
+    <!-- Demo Analytics -->
+    <script>
+      var _gaq=[['_setAccount','UA-20440416-10'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)})(document,'script');
+    </script>
+
+    <!-- Demo Ads -->
+    <script src="//www.toddmotto.com/ads/ads.js"></script>
+  </body>
+</html>
