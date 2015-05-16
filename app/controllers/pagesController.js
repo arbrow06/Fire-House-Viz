@@ -17,4 +17,9 @@ function() {
   this.title = 'Topography';
   this.render();
 }
+pagesController.test =
+function() {
+  this.title = 'test';
+  this.render();
+}
 module.exports = pagesController;

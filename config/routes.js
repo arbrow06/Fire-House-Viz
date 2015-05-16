@@ -9,4 +9,5 @@ module.exports = function routes() {
   this.root('pages#main');
   this.match('maps', { controller: 'pages', action: 'maps' });
   this.match('topojson', {controller: 'pages', action: 'topojson'});
+  this.match('test', {controller: 'pages', action: 'test'});
 }
