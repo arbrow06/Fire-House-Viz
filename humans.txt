@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Andrew Brown -- Director -- @abrownboygenius
 
 # THANKS
 
-    <name>
+    All my supporters
 
 # TECHNOLOGY COLOPHON
 
