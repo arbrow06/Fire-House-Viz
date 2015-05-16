@@ -12,4 +12,9 @@ function() {
   this.title = 'Map';
   this.render();
 }
+pagesController.topojson =
+function() {
+  this.title = 'Topography';
+  this.render();
+}
 module.exports = pagesController;
