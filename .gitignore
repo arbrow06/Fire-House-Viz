@@ -3,3 +3,6 @@
 
 node_modules
 doc
+.DS_Store
+build
+*.log

@@ -1,5 +1,5 @@
 {
-  "name": "app-name",
+  "name": "Fire Department Visualize",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -8,7 +8,8 @@
     "bootable-environment": "0.2.x",
     "express": "3.x.x",
     "connect-powered-by": "0.1.x",
-    "ejs": "0.8.x"
+    "ejs": "0.8.x",
+    "topojson":"1"
   },
   "scripts": {
     "start": "node server.js"

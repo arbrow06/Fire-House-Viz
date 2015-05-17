@@ -12,6 +12,7 @@ function() {
   this.title = 'Map';
   this.render();
 }
+//Test Pages
 pagesController.topojson =
 function() {
   this.title = 'Topography';
@@ -22,4 +23,5 @@ function() {
   this.title = 'test';
   this.render();
 }
+//End Test Pages
 module.exports = pagesController;
