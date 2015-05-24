@@ -17,3 +17,74 @@ body { height: 100%; margin: 0; padding: 0 }
   height: 600px;
   width: 100%;
   }
+  
+ /* Pricing Table Styles*/
+body {
+  margin: 10rem 0;
+  background: #d2d7d3; }
+
+.pricing-table, .recommended {
+  position: relative;
+  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
+  border-radius: 3px;
+  transition: 0.4s ease-in-out;
+  z-index: 13; }
+  .pricing-table .title, .recommended .title {
+    background: #f2f1ef;
+    color: #59abe3;
+    font-size: 2rem; }
+  .pricing-table .price, .recommended .price {
+    background: #f2f1ef;
+    color: #F9690E; }
+    .pricing-table .price hr, .recommended .price hr {
+      color: #6a6456;
+      width: 70%;
+      margin: 0 auto; }
+  .pricing-table .bullet-item, .recommended .bullet-item {
+    background: #f2f1ef;
+    border: none;
+    font-size: 2rem; }
+    .pricing-table .bullet-item span, .recommended .bullet-item span {
+      font-size: 1.3rem; }
+  .pricing-table .cta-button, .recommended .cta-button {
+    background: #f2f1ef; }
+    .pricing-table .cta-button .button, .recommended .cta-button .button {
+      background-color: #f9690e;
+      border-radius: 3px;
+      border-bottom: 3px solid #b44804; }
+      .pricing-table .cta-button .button:hover, .recommended .cta-button .button:hover {
+        background-color: #b44804; }
+  .pricing-table span, .recommended span {
+    color: #b1ab9f; }
+
+.recommended {
+  z-index: 15;
+  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
+  border: 3px solid #59abe3;
+  transform: scale(1.25); }
+  .recommended .best {
+    background: #f2f1ef;
+    text-align: center; }
+    .recommended .best span {
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      margin: 0 auto;
+      top: -1px;
+      background-color: #59abe3;
+      color: #f2f1ef;
+      padding: 0.3rem 1.5rem;
+      height: 2rem;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px; }
+  .recommended .title {
+    padding-top: 2rem; }
+  .recommended .cta-button .button {
+    background: #59abe3;
+    border-bottom: 3px solid #207dbd; }
+    .recommended .cta-button .button:hover {
+      background-color: #207dbd; }
+  @media only screen and (max-width: 40.063em) {
+    .recommended {
+      transform: scale(1); } }
+/* End Pricing Table Styles*/
