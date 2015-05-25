@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/custom.css">
 	<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="js/vendor/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 	<!--[if lt IE 8]>
@@ -18,67 +19,94 @@
 	<![endif]-->
 
 	<!-- Add your site or application content here -->
-	<header>
-	</header>
-	<div class="horz-stripe></div>
-	<div class="highlight row">
-		<div class="small-2 medium-4 columns>
-		</div>
-		<div class="small-10 medium-8 columns>
-		</div>
-	</div>
-	<div class="horz-stripe></div>
-	<div class="highlight row">
-		<div class="small-10 medium-8 columns>
-		</div>
-		<div class="small-2 medium-4 columns>
-		</div>
-	</div>
-	<div class="horz-stripe></div>
-	<div class="row"> 
-  <div class="medium-4 columns">
-     <ul class="pricing-table">
-       <li class="title">Starter</li>
-       <li class="price">$59.<sup>90<sup>
-         <br><span>per month</span>
-         <hr>
-       </li>
-       <li class="bullet-item">3<span> websites</span></li>
-       <li class="bullet-item">10 <span> bdd access</span></li>
-       <li class="bullet-item">2 <span> users</span></li>
-       <li class="cta-button"><button class="button" href="#">Choose Plan</button></li>
-     </ul>
-   </div>
-  <div class="medium-4 columns">
-     <ul class="pricing-table recommended">
-       <li class="best"><span>Recommended</span></li>
-       <li class="title">Team</li>
-       <li class="price">$129.<sup>90<sup>
-         <br><span>per month</span>
-         <hr>
-       </li>
-       <li class="bullet-item">10<span> websites</span></li>
-       <li class="bullet-item">25 <span> bdd access</span></li>
-       <li class="bullet-item">5 <span> users</span></li>
-       <li class="cta-button"><button class="button" href="#">Choose Plan</button></li>
-     </ul>
-   </div>
-  <div class="medium-4 columns">
-     <ul class="pricing-table">
-       <li class="title">Premium</li>
-       <li class="price">$259.<sup>90<sup>
-         <br><span>per month</span>
-         <hr>
-       </li>
-       <li class="bullet-item">50<span> websites</span></li>
-       <li class="bullet-item">80 <span> bdd access</span></li>
-       <li class="bullet-item">25 <span> users</span></li>
-       <li class="cta-button"><button class="button" href="#">Choose Plan</button></li>
-     </ul>
-   </div>
+	<header class="site-header sticky-header">
+<div class="row menu-container">
+<div class="large-3 small-9 columns text-left logo">
+<a href="/">
+<img alt="Pact Coffee Logo" class="logo--crest" src="/assets/logo-splash.png">
+</a>
+<a class="logo--inline" href="/">
+<img alt="Pact Coffee Logo" src="/assets/logo-horizontal.png">
+</a>
 </div>
+<div class="large-12 small-3 columns show-menu">
+<a href="#">Menu</a>
+</div>
+<div class="large-9 columns menu">
+<ul>
+<li class="cta">
+<a class="button button--primary button--cta button--condensed home-page-btn" data-show-modal="#coffee-picker" href="#" id="nav-button">
+Get Started
+</a>
+</li>
+<li class="login highlight">
+<a href="/login">Login</a>
+</li>
+<li class="faq">
+<a href="/faq">FAQ</a>
+</li>
+<li class="jobs">
+<a href="/jobs">Jobs</a>
+</li>
+<li id="coffee-gift">
+<a href="/gift">Buy A Gift</a>
+</li>
+<li class="coffees">
+<a href="/coffees">Our Coffees</a>
+</li>
+<li class="about">
+<a href="/about">About</a>
+</li>
+</ul>
+</div>
+
+</div>
+
+
+
+
+</header>
+	<section class="photo-header">
+		<div class="row coffee-process-header">
+			<h1 class="header--coffee-journey">
+				The Best Coffee<br>You’ve Ever Made
+			</h1>
+			<p class="summary--coffee-journey">Fresher, better-tasting coffee, delivered to you as you need it. That's what we do and we think you're going to like it. Maybe even - as we get to know each other - love it.</p>
+		</div>
+		<nav class="coffee-steps">
+			<ul class="steps row">
+				<li class="step large-3 columns">
+					<a data-scroll-to="#sourcing" href="#sourcing">
+						<i class="big-icon ss-globe"></i>
+						<span>We source world-class beans</span>
+					</a>
+				</li>
+				<li class="step large-3 columns">
+					<a data-scroll-to="#roasting" href="#roasting">
+						<i class="big-icon ss-fan"></i>
+						<span>We lovingly hand roast them</span>
+					</a>
+				</li>
+				<li class="step large-3 columns" data-scroll-to="#delivered" href="#delivered">
+					<a href="#">
+						<i class="big-icon ss-mail"></i>
+						<span>We deliver right to your doormat</span>
+					</a>
+				</li>
+				<li class="step large-3 columns">
+					<a data-scroll-to="#love" href="#love">
+						<i class="big-icon ss-heart"></i>
+						<span>You try them in your own time</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</section>
+<!-- Pricing Table 
+
+-->
+
 	<!-- END SITE -->
-	<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/fastclick.js"></script>
 	<script src="/js/foundation.min.js"></script>
 	<script src="/js/plugins.js"></script>

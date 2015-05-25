@@ -4,24 +4,24 @@ var locomotive = require('locomotive')
 var pagesController = new Controller();
 
 pagesController.main = function() {
-  this.title = 'Locomotive';
+  this.title = 'Fire Responseware Technologies';
   this.render();
-}
+};
 pagesController.maps =
 function() {
   this.title = 'Map';
   this.render();
-}
+};
 //Test Pages
 pagesController.topojson =
 function() {
   this.title = 'Topography';
   this.render();
-}
+};
 pagesController.test =
 function() {
   this.title = 'test';
   this.render();
-}
+};
 //End Test Pages
 module.exports = pagesController;

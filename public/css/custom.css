@@ -1,90 +1,127 @@
-.nav ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-.nav li {
-
-  display: inline;
-
-}
 html { height: 100% }
 body { height: 100%; margin: 0; padding: 0 }
-#map-canvas { height: 100% }
-
 #map {
   height: 600px;
   width: 100%;
-  }
-  
- /* Pricing Table Styles*/
-body {
-  margin: 10rem 0;
-  background: #d2d7d3; }
-
-.pricing-table, .recommended {
-  position: relative;
-  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-  border-radius: 3px;
-  transition: 0.4s ease-in-out;
-  z-index: 13; }
-  .pricing-table .title, .recommended .title {
-    background: #f2f1ef;
-    color: #59abe3;
-    font-size: 2rem; }
-  .pricing-table .price, .recommended .price {
-    background: #f2f1ef;
-    color: #F9690E; }
-    .pricing-table .price hr, .recommended .price hr {
-      color: #6a6456;
-      width: 70%;
-      margin: 0 auto; }
-  .pricing-table .bullet-item, .recommended .bullet-item {
-    background: #f2f1ef;
-    border: none;
-    font-size: 2rem; }
-    .pricing-table .bullet-item span, .recommended .bullet-item span {
-      font-size: 1.3rem; }
-  .pricing-table .cta-button, .recommended .cta-button {
-    background: #f2f1ef; }
-    .pricing-table .cta-button .button, .recommended .cta-button .button {
-      background-color: #f9690e;
-      border-radius: 3px;
-      border-bottom: 3px solid #b44804; }
-      .pricing-table .cta-button .button:hover, .recommended .cta-button .button:hover {
-        background-color: #b44804; }
-  .pricing-table span, .recommended span {
-    color: #b1ab9f; }
-
-.recommended {
-  z-index: 15;
-  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-  border: 3px solid #59abe3;
-  transform: scale(1.25); }
-  .recommended .best {
-    background: #f2f1ef;
-    text-align: center; }
-    .recommended .best span {
-      position: relative;
-      text-align: center;
-      display: inline-block;
-      margin: 0 auto;
-      top: -1px;
-      background-color: #59abe3;
-      color: #f2f1ef;
-      padding: 0.3rem 1.5rem;
-      height: 2rem;
-      border-bottom-right-radius: 6px;
-      border-bottom-left-radius: 6px; }
-  .recommended .title {
-    padding-top: 2rem; }
-  .recommended .cta-button .button {
-    background: #59abe3;
-    border-bottom: 3px solid #207dbd; }
-    .recommended .cta-button .button:hover {
-      background-color: #207dbd; }
-  @media only screen and (max-width: 40.063em) {
-    .recommended {
-      transform: scale(1); } }
-/* End Pricing Table Styles*/
+}
+.photo-header{
+	background:url("/img/firehouse.jpg") no-repeat center bottom;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-position:right center;
+	background-size:cover !important;
+	padding:4rem 0 3rem;
+	text-align:left;
+	position:relative;
+	text-shadow:0 0 10px rgba(0,0,0,0.6)
+}
+@media screen and (min-width: 768px){
+	.photo-header{padding:5rem 0 5rem}
+}
+.photo-header:before{
+	width:100%;height:100%;
+	content:' ';
+	background:rgba(0,0,0,0.63);
+	display:block;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:0
+}
+.photo-header>*{z-index:99}
+.photo-header p{
+	width:80%;
+	max-width:520px;
+	color:white;
+	position:relative;
+	-webkit-font-smoothing:antialiased;
+	font-style:italic;
+	font-size:1.25rem;
+	margin:auto;
+	margin-bottom:3.2rem;
+	text-align:center
+}
+@media screen and (min-width: 760px){
+	.photo-header p{
+		margin:0;
+		margin-bottom:3.2rem;
+		text-align:left
+	}
+}
+.photo-header .buttons{text-align:center}
+.photo-header .buttons .button{max-width:40%}
+@media screen and (min-width: 760px){
+	.photo-header .buttons .button{max-width:15rem}
+}
+@media screen and (min-width: 760px){
+	.photo-header .buttons{text-align:left}
+}
+.coffee-process-header .header--coffee-journey,.coffee-process-header .header--voucher-prize,.modal-block .photo-header .header--coffee-journey,.modal-block .photo-header .header--voucher-prize,.ember-application .photo-header .header--coffee-journey,.ember-application .photo-header .header--voucher-prize{
+	text-align:center;
+	margin:auto;
+	margin-top:2rem
+}
+.coffee-process-header .header--voucher-prize,.modal-block .photo-header .header--voucher-prize,.ember-application .photo-header .header--voucher-prize{margin-top:0}
+.coffee-process-header .summary--coffee-journey,.modal-block .photo-header .summary--coffee-journey,.ember-application .photo-header .summary--coffee-journey{
+	text-align:center;
+	margin:auto;
+	margin-bottom:3.6rem
+}
+.coffee-process-header .sub-heading,.modal-block .photo-header .sub-heading,.ember-application .photo-header .sub-heading{
+	text-align:center;
+	font-size:1.4rem
+}
+.coffee-process-header .buttons,.modal-block .photo-header .buttons,.ember-application .photo-header .buttons{text-align:center}
+@media screen and (min-width: 760px){
+	.coffee-process-header .buttons,.modal-block .photo-header .buttons,.ember-application .photo-header .buttons{text-align:center}
+}
+.photo-header--v60{
+	padding:2.9rem 0 2rem;
+	background:url("/assets/v60-header.jpg") no-repeat center bottom
+}
+.header--coffee-journey,.header--voucher-prize{
+	color:white;
+	text-transform:uppercase;
+	width:100%;
+	max-width:540px;
+	padding-bottom:.5rem;
+	margin-bottom:.4rem;
+	font-size:3rem;
+	text-align:center;
+	margin:auto;
+	line-height:1.2;
+	letter-spacing:3px
+}
+@media screen and (min-width: 760px){
+	.header--coffee-journey,.header--voucher-prize{
+		font-size:4.4rem;
+		text-align:left;
+		margin:0
+	}
+}
+.video--background{
+	position:absolute;
+	width:100%;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:-1
+}
+.photo-header--video{
+	padding:8rem 1rem 1rem;
+	overflow:hidden;
+	background-position:center left
+}
+@media screen and (min-width: 760px){
+	.photo-header--video{
+		padding:10rem 1rem 4rem;
+		background:none
+	}
+	.photo-header--video:before{
+		background:linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.05))
+	}
+}
