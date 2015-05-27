@@ -1,127 +1,52 @@
-html { height: 100% }
-body { height: 100%; margin: 0; padding: 0 }
+@import url(normalize.css);
+@import url(foundation.min.css);
+
+html, body { 
+	height: 1600px ;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 #map {
   height: 600px;
   width: 100%;
 }
-.photo-header{
-	background:url("/img/firehouse.jpg") no-repeat center bottom;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	background-position:right center;
-	background-size:cover !important;
-	padding:4rem 0 3rem;
-	text-align:left;
-	position:relative;
-	text-shadow:0 0 10px rgba(0,0,0,0.6)
+/*Header CSS*/
+header {
+	background-image: url(../img/firehouse.jpg);
+    height: 100vh;
+    width:100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
 }
-@media screen and (min-width: 768px){
-	.photo-header{padding:5rem 0 5rem}
+nav li {
+    display: inline;
+    padding: 20px;
 }
-.photo-header:before{
-	width:100%;height:100%;
-	content:' ';
-	background:rgba(0,0,0,0.63);
-	display:block;
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	z-index:0
+
+#logo {
+    width:20px;
+    height:20px;
 }
-.photo-header>*{z-index:99}
-.photo-header p{
-	width:80%;
-	max-width:520px;
-	color:white;
-	position:relative;
-	-webkit-font-smoothing:antialiased;
-	font-style:italic;
-	font-size:1.25rem;
-	margin:auto;
-	margin-bottom:3.2rem;
-	text-align:center
+#logoHorz {
+    width:100px;
+    height:20px;
 }
-@media screen and (min-width: 760px){
-	.photo-header p{
-		margin:0;
-		margin-bottom:3.2rem;
-		text-align:left
-	}
+
+.float { 
+    width: 100%;
+    position: fixed;
+    background-color: rgba(169, 169, 169, 0.7);
 }
-.photo-header .buttons{text-align:center}
-.photo-header .buttons .button{max-width:40%}
-@media screen and (min-width: 760px){
-	.photo-header .buttons .button{max-width:15rem}
+.noFloat {
+    display:none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
-@media screen and (min-width: 760px){
-	.photo-header .buttons{text-align:left}
-}
-.coffee-process-header .header--coffee-journey,.coffee-process-header .header--voucher-prize,.modal-block .photo-header .header--coffee-journey,.modal-block .photo-header .header--voucher-prize,.ember-application .photo-header .header--coffee-journey,.ember-application .photo-header .header--voucher-prize{
-	text-align:center;
-	margin:auto;
-	margin-top:2rem
-}
-.coffee-process-header .header--voucher-prize,.modal-block .photo-header .header--voucher-prize,.ember-application .photo-header .header--voucher-prize{margin-top:0}
-.coffee-process-header .summary--coffee-journey,.modal-block .photo-header .summary--coffee-journey,.ember-application .photo-header .summary--coffee-journey{
-	text-align:center;
-	margin:auto;
-	margin-bottom:3.6rem
-}
-.coffee-process-header .sub-heading,.modal-block .photo-header .sub-heading,.ember-application .photo-header .sub-heading{
-	text-align:center;
-	font-size:1.4rem
-}
-.coffee-process-header .buttons,.modal-block .photo-header .buttons,.ember-application .photo-header .buttons{text-align:center}
-@media screen and (min-width: 760px){
-	.coffee-process-header .buttons,.modal-block .photo-header .buttons,.ember-application .photo-header .buttons{text-align:center}
-}
-.photo-header--v60{
-	padding:2.9rem 0 2rem;
-	background:url("/assets/v60-header.jpg") no-repeat center bottom
-}
-.header--coffee-journey,.header--voucher-prize{
-	color:white;
-	text-transform:uppercase;
-	width:100%;
-	max-width:540px;
-	padding-bottom:.5rem;
-	margin-bottom:.4rem;
-	font-size:3rem;
-	text-align:center;
-	margin:auto;
-	line-height:1.2;
-	letter-spacing:3px
-}
-@media screen and (min-width: 760px){
-	.header--coffee-journey,.header--voucher-prize{
-		font-size:4.4rem;
-		text-align:left;
-		margin:0
-	}
-}
-.video--background{
-	position:absolute;
-	width:100%;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	z-index:-1
-}
-.photo-header--video{
-	padding:8rem 1rem 1rem;
-	overflow:hidden;
-	background-position:center left
-}
-@media screen and (min-width: 760px){
-	.photo-header--video{
-		padding:10rem 1rem 4rem;
-		background:none
-	}
-	.photo-header--video:before{
-		background:linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.05))
-	}
+.fixed {
+    position:fixed;
 }
