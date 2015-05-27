@@ -1,129 +1,52 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title><%= title %></title>
 	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<!-- Place favicon.ico in the root directory -->
-	<link rel="stylesheet" href="css/foundation.css" />
-	<link rel="stylesheet" href="css/custom.css">
-	<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
-	<script src="js/vendor/jquery-1.11.3.min.js"></script>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+	<!-- Included CSS Files -->
+	<link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<!--[if lt IE 8]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-
-	<!-- Add your site or application content here -->
-	<header class="site-header sticky-header">
-<div class="row menu-container">
-<div class="large-3 small-9 columns text-left logo">
-<a href="/">
-<img alt="Pact Coffee Logo" class="logo--crest" src="/assets/logo-splash.png">
-</a>
-<a class="logo--inline" href="/">
-<img alt="Pact Coffee Logo" src="/assets/logo-horizontal.png">
-</a>
-</div>
-<div class="large-12 small-3 columns show-menu">
-<a href="#">Menu</a>
-</div>
-<div class="large-9 columns menu">
-<ul>
-<li class="cta">
-<a class="button button--primary button--cta button--condensed home-page-btn" data-show-modal="#coffee-picker" href="#" id="nav-button">
-Get Started
-</a>
-</li>
-<li class="login highlight">
-<a href="/login">Login</a>
-</li>
-<li class="faq">
-<a href="/faq">FAQ</a>
-</li>
-<li class="jobs">
-<a href="/jobs">Jobs</a>
-</li>
-<li id="coffee-gift">
-<a href="/gift">Buy A Gift</a>
-</li>
-<li class="coffees">
-<a href="/coffees">Our Coffees</a>
-</li>
-<li class="about">
-<a href="/about">About</a>
-</li>
-</ul>
-</div>
-
-</div>
-
-
-
-
-</header>
-	<section class="photo-header">
-		<div class="row coffee-process-header">
-			<h1 class="header--coffee-journey">
-				The Best Coffee<br>You’ve Ever Made
-			</h1>
-			<p class="summary--coffee-journey">Fresher, better-tasting coffee, delivered to you as you need it. That's what we do and we think you're going to like it. Maybe even - as we get to know each other - love it.</p>
-		</div>
-		<nav class="coffee-steps">
-			<ul class="steps row">
-				<li class="step large-3 columns">
-					<a data-scroll-to="#sourcing" href="#sourcing">
-						<i class="big-icon ss-globe"></i>
-						<span>We source world-class beans</span>
-					</a>
-				</li>
-				<li class="step large-3 columns">
-					<a data-scroll-to="#roasting" href="#roasting">
-						<i class="big-icon ss-fan"></i>
-						<span>We lovingly hand roast them</span>
-					</a>
-				</li>
-				<li class="step large-3 columns" data-scroll-to="#delivered" href="#delivered">
-					<a href="#">
-						<i class="big-icon ss-mail"></i>
-						<span>We deliver right to your doormat</span>
-					</a>
-				</li>
-				<li class="step large-3 columns">
-					<a data-scroll-to="#love" href="#love">
-						<i class="big-icon ss-heart"></i>
-						<span>You try them in your own time</span>
-					</a>
-				</li>
+	<header >
+		<div class="logo_sq"><img class="logo" src=""></div>
+		<nav class="float">
+			<ul>
+				<li>About</li>
+				<li>Services</li>
+				<li>FAQ</li>
+				<li>Contact</li>
 			</ul>
 		</nav>
-	</section>
-<!-- Pricing Table 
+		<div id="logo_sq"><img class="logoHorz" src=""></div>
+		<nav class="noFloat fixed">
+			<ul>
+				<li>About</li>
+				<li>Services</li>
+				<li>FAQ</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+	</header>
+	<script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	$(document).scroll(function () {
+		var headerHeight = $('header').height(),
+    		y = $(this).scrollTop();
+	    if (y > headerHeight) {
+	        $('.noFloat').fadeIn();
+	        $('.float').fadeOut();
 
--->
-
-	<!-- END SITE -->
-	<script src="/js/vendor/fastclick.js"></script>
-	<script src="/js/foundation.min.js"></script>
-	<script src="/js/plugins.js"></script>
-	<script src="/js/main.js"></script>
-	<script>
-		$(document).foundation();
-	</script>
-	<!-- Remove analytics temp.
-	Google Analytics: change UA-XXXXX-X to be your site's ID.
-	<script>
-		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-		e.src='https://www.google-analytics.com/analytics.js';
-		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-	ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-	</script>
-	-->
+	    } else {
+	        $('.noFloat').fadeOut();
+	        $('.float').fadeIn();
+	    }
+	});
+</script>
 </body>
 </html>
